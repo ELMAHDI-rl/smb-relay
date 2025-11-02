@@ -27,6 +27,7 @@ This is a graphic that represents how this attack should work:
 
  
 Configure dnsspoof in order to redirect the victim to our Metasploit system every time there's an SMB connection to any host in the domain: sportsfoo.com. 
+
 Create a file with fake dns entry with all subdomains of sportsfoo.com pointing to our attacker machine.
 
 <img width="1025" height="69" alt="Screenshot 2025-11-02 222705" src="https://github.com/user-attachments/assets/0d4c57fb-5e0e-4611-a541-e735dd5084e2" />
