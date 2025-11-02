@@ -62,6 +62,7 @@ In Metasploit, every time there is an incoming SMB connection, the SMB Relay exp
 <img width="1066" height="419" alt="Screenshot 2025-11-02 223013" src="https://github.com/user-attachments/assets/f5bdf26f-ef3b-4702-b4a7-f4e1c8d20666" />
 
 The SMB Relay attack was successful, and we were able to obtain a meterpreter session on the target machine.
+
 Interact with the meterpreter session.
 
 <img width="858" height="88" alt="Screenshot 2025-11-02 223101" src="https://github.com/user-attachments/assets/d113ab82-fbda-47ba-95db-93defac6ed6b" />
