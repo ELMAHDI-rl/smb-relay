@@ -54,6 +54,7 @@ dnsspoof aligned with the ARP Spoof attack, forges the DNS replies telling that 
 
 from the previous results, Windows 7 has started an SMB connection for [\\fileserver.sportsfoo.com\AnyShare]. Then instead of getting a DNS response with the real IP address of 
 fileserver.sportsfoo.com, it received the IP of the attacker: 172.16.5.101. Consequently, the SMB connection is hijacked to [\\172.16.5.101\AnyShare
+
 Start msfconsole and configure the SMB Relay exploit:
 
 <img width="859" height="360" alt="Screenshot 2025-11-02 231747" src="https://github.com/user-attachments/assets/bb045dab-f447-4d5d-9018-e704f29efd9d" />
