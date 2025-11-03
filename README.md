@@ -13,7 +13,8 @@ Launch an attack using the SMB Relay Exploit in a way that once the Client (172.
 and then you can use its credentials to get a shell on the target machine (172.16.5.10*).
 
 This is a graphic that represents how this attack should work:
-<img width="875" height="604" alt="Screenshot 2025-11-02 225905" src="https://github.com/user-attachments/assets/cf122d4e-7587-4ced-8760-539e3b21003c" />
+
+<img width="875" height="604" alt="Screenshot 2025-11-02 225905" src="https://github.com/user-attachments/assets/ac17c7fc-946d-4c7e-bbff-464e04eb13e8" />
 
  1.Client (Windows 7) issues a SMB connection to [\\fileserver.sportsfoo.com\finance$] at every 30 seconds or so.
 
@@ -30,22 +31,22 @@ Configure dnsspoof in order to redirect the victim to our Metasploit system ever
 
 Create a file with fake dns entry with all subdomains of sportsfoo.com pointing to our attacker machine.
 
-<img width="1025" height="69" alt="Screenshot 2025-11-02 222705" src="https://github.com/user-attachments/assets/0d4c57fb-5e0e-4611-a541-e735dd5084e2" />
+<img width="1025" height="69" alt="Screenshot 2025-11-02 222705" src="https://github.com/user-attachments/assets/44e618c7-0bda-4a16-b9eb-9a77be95fece" />
 
 Then we run dnsspoof as following :
 
-<img width="718" height="72" alt="Screenshot 2025-11-02 230544" src="https://github.com/user-attachments/assets/a8021002-c5e2-45cb-b13b-96cfa465759d" />
+<img width="718" height="72" alt="Screenshot 2025-11-02 230544" src="https://github.com/user-attachments/assets/acab061e-49f0-4901-9dd1-d2f4c0caedac" />
 
 In order to perform an ARP Spoofing attack, we need to enable the IP forwarding as follow:
 
-<img width="782" height="60" alt="Screenshot 2025-11-02 222822" src="https://github.com/user-attachments/assets/2965c5e1-13cf-4585-b925-e7e9b6e1e88d" />
+<img width="782" height="60" alt="Screenshot 2025-11-02 222822" src="https://github.com/user-attachments/assets/ff11b218-34f6-4566-9d55-c86f6e792b6e" />
 
 Activate the MiTM attack using the ARP Spoofing technique. Our goal is to poison the traffic between our victim, Windows 7 at 172.16.5.5, and the default gateway at
 172.16.5.1. In this way, we can manipulate the traffic using dnsspoof, which is already running.
 In two separate terminals, start the ARP Spoof attack against 172.16.5.5 and 172.16.5.1 using these commands:
 
-<img width="803" height="478" alt="Screenshot 2025-11-02 222505" src="https://github.com/user-attachments/assets/1769ac95-d2a0-429d-a25e-2fc864939d38" />
-<img width="844" height="491" alt="Screenshot 2025-11-02 222556" src="https://github.com/user-attachments/assets/8c625fef-f93e-4006-ad50-d52683a44813" />
+<img width="803" height="478" alt="Screenshot 2025-11-02 222505" src="https://github.com/user-attachments/assets/0abbf02e-69fd-49cb-bbf3-315a592d4d2c" />
+<img width="844" height="491" alt="Screenshot 2025-11-02 222556" src="https://github.com/user-attachments/assets/d0e8f9d0-78c6-4685-b534-138259323a61" />
 
 dnsspoof aligned with the ARP Spoof attack, forges the DNS replies telling that the searched DNS address is hosted at the attacker machine:
 
